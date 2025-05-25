@@ -4,7 +4,13 @@ The frontend of Chess Master, a modern online chess platform built with React an
 
 ## 🌐 Live Demo
 
-[Chess Master Frontend](https://chess-frontend-iota-two.vercel.app/)
+- Frontend: [Chess Master Frontend](https://chess-frontend-iota-two.vercel.app/)
+- Backend API: [Chess Master Backend](https://chess-backend-mo0t.onrender.com)
+
+## 📂 Repositories
+
+- Frontend: [Chess Frontend Repository](https://github.com/Lokesh-reddy18/Chess-frontend.git)
+- Backend: [Chess Backend Repository](https://github.com/Lokesh-reddy18/chess-backend.git)
 
 ## 🎮 Features
 
