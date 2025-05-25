@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/webp" href="./src/components/pieces/wN.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="./src/assets/fonts/main-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="image" href="./src/assets/images/bgChess.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://code.jquery.com">
+
+  <!-- Standard Meta Tags -->
+  <meta name="description" content="Chess Master is the ultimate online chess experience featuring multiple game modes, puzzles, multiplayer, and AI challenges for players of all levels." />
+  <meta name="keywords" content="Chess, Chess Master, Online Chess, Chess Puzzles, Chess Multiplayer, Chess AI, Stockfish, Chess Game, Chessboard" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Lokesh Reddy" />
+  <link rel="canonical" href="https://chess-frontend-dun.vercel.app/" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Chess Master">
+  <meta property="og:description" content="Experience an immersive chess adventure with Chess Master. Enjoy multiple game modes, challenging puzzles, and competitive multiplayer action." />
+  <meta property="og:image" content="https://chess-frontend-dun.vercel.app/chess.webp">
+  <meta property="og:url" content="https://chess-frontend-dun.vercel.app/">
+  <meta property="og:site_name" content="Chess Master">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chess Master">
+  <meta name="twitter:description" content="Join Chess Master for an immersive chess experience featuring multiplayer modes, puzzles, and AI challenges. Sharpen your skills and enjoy endless chess action!" />
+  <meta name="twitter:image" content="https://chess-frontend-dun.vercel.app/chess.webp">
+
+  <!-- Structured Data: JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Chess Master",
+    "url": "https://chess-frontend-dun.vercel.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://chess-frontend-dun.vercel.app/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Title -->
+  <title>Chess Master</title>
+
+  <!-- External CSS & Fonts - Load asynchronously -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous" media="print" onload="this.media='all'">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- Fallback for CSS if JavaScript is disabled -->
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </noscript>
+
+  <!-- Defer non-critical JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous" defer></script>
+  <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous" defer></script>
+
+  <!-- Google Analytics - Disabled on Localhost -->
+  <script>
+    if (window.location.hostname !== "localhost") {
+      (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments);
+        };
+        i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, "script", "https://www.googletagmanager.com/gtag/js?id=G-RQMR32TRLT", "ga");
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-RQMR32TRLT', { 'send_page_view': true });
+    } else {
+      console.log("Google Analytics is disabled on localhost");
+    }
+  </script>
+</head>
+
+<body class="min-w-screen">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
